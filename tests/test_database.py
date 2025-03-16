@@ -13,11 +13,10 @@ class TestDatabase:
         db = Database()
         cls.buns = {bun.name for bun in db.available_buns()}
         cls.ingredients = {ingredient.name for ingredient in db.available_ingredients()}
-        print('-- SetUp (class)')
 
     @classmethod
     def teardown_class(cls):
-        print('-- tearDown (class)')
+        pass
 
     def test_available_buns_correct_quantity(self):
         assert len(self.buns) == 3
